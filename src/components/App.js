@@ -1,16 +1,21 @@
 import React from 'react';
-import Numbers from './numbers/Numbers';
+//import Numbers from './numbers/Numbers';
 import user from '../user.json';
-import Profile from './profile/Profile'
+import Profile from './profile/Profile';
+import statistic from '../statistical-data.json';
+import Statistic from './statistic/Statistic';
+
 
 //console.log(user);
 
-const arr = [1, 2, 3, 4, 5];
+//const arr = [1, 2, 3, 4, 5];
 
 export const App = (props) => {
 	return (
 		<>
 			<Profile user={user}/>
+			<Statistic statistic={statistic} />
+
 		</>
 	);
 	
@@ -28,6 +33,8 @@ export const App = (props) => {
  	
 
 };
+
+//export default App;
 
 
 //export default App;

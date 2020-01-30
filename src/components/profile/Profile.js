@@ -1,15 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Profile = ({ user }) => {
 	const { name, avatar, location, tag, stats } = user;
-	console.log(user);
+	//console.log(user);
   return (
     <div className="profile">
       <div className="description">
         <img
           src={avatar}
           alt="user avatar"
-          className="avatar"
+					className="avatar"
+					width="180"
         />
         <p className="name">{name}</p>
         <p className="tag">@{tag}</p>
@@ -35,3 +37,14 @@ const Profile = ({ user }) => {
 };
 
 export default Profile;
+
+Profile.propTypes = {
+  user: PropTypes.shape({
+		name: PropTypes.string,
+		avatar: PropTypes.string,
+		location: PropTypes.string,
+		//location: PropTypes.array,     //проверка ошибки
+		tag: PropTypes.string,
+		stats: PropTypes.object
+  }),
+};
