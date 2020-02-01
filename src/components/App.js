@@ -10,7 +10,7 @@ import Statistic from './statistic/Statistic';
 
 //const arr = [1, 2, 3, 4, 5];
 
-export const App = (props) => {
+const App = (props) => {
 	return (
 		<>
 			<Profile user={user}/>
@@ -34,7 +34,7 @@ export const App = (props) => {
 
 };
 
-//export default App;
+export default App;
 
 
 //export default App;
