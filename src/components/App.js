@@ -1,40 +1,30 @@
 import React from 'react';
-//import Numbers from './numbers/Numbers';
+import { Row, Col } from 'antd';
 import user from '../user.json';
 import Profile from './profile/Profile';
 import statistic from '../statistical-data.json';
-import Statistic from './statistic/Statistic';
+import Stat from './statistic/Stat';
+import friends from '../friends.json'
+import FriendList from './friend-list/FriendList'
+import transactions from '../transactions.json';
+import TransactionHistory from './transaction-history/TransactionHistory'
 
-
-//console.log(user);
-
-//const arr = [1, 2, 3, 4, 5];
-
-const App = (props) => {
-	return (
-		<>
-			<Profile user={user}/>
-			<Statistic statistic={statistic} />
-
-		</>
-	);
-	
-  // return (
-  //   <>
-	// 		{	console.log('props', props) }      
-	// 		<ul>
-  //       {arr.map((item, idx, arr) => (
-  //         <Numbers key={idx} item={item} idx={idx} arr={arr} />
-  //       ))}
-  //     </ul>
-  //     <div>Hello App!</div>
-  //   </>
-	// );
- 	
-
+const App = () => {
+  return (
+    <>
+      <Row type="flex" justify="center">
+        <Col>
+          <Profile user={user} />
+					<Stat statistic={statistic} />
+					<FriendList friends={friends} />
+        </Col>
+				<Col>  
+          <TransactionHistory transactions={transactions} />
+        </Col>
+      </Row>
+     
+    </>
+  );
 };
 
 export default App;
-
-
-//export default App;
