@@ -1,13 +1,10 @@
-import React from 'react';
+import React from 'react'
+import Statistics from './statistics/Statistics'
 
-const App = () => {
-	return (
-		<>
-			Хеллоу Эврибади!
-		</>
-	);
-};
+const App = () => (
+	<>
+		<Statistics />
+	</>
+);
 
 export default App;
-
-
